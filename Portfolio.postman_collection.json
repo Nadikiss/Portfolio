@@ -1,0 +1,1343 @@
+{
+	"info": {
+		"_postman_id": "24c60833-4d85-4477-a945-97e1938918a8",
+		"name": "Portfolio",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "38719598"
+	},
+	"item": [
+		{
+			"name": "companies",
+			"item": [
+				{
+					"name": "CompaniesDefaultRequest",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base URL}}/api/companies",
+							"host": [
+								"{{base URL}}"
+							],
+							"path": [
+								"api",
+								"companies"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CompaniesWithoutSSL",
+					"protocolProfileBehavior": {
+						"followRedirects": false,
+						"strictSSL": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://restapi.tech/api/companies",
+							"protocol": "http",
+							"host": [
+								"restapi",
+								"tech"
+							],
+							"path": [
+								"api",
+								"companies"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CompaniesWithLimitAndOffset",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base URL}}/api/companies?limit=5&offset=2",
+							"host": [
+								"{{base URL}}"
+							],
+							"path": [
+								"api",
+								"companies"
+							],
+							"query": [
+								{
+									"key": "limit",
+									"value": "5"
+								},
+								{
+									"key": "offset",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CompaniesWith Py status СLOSED",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base URL}}/api/companies?py status=CLOSED",
+							"host": [
+								"{{base URL}}"
+							],
+							"path": [
+								"api",
+								"companies"
+							],
+							"query": [
+								{
+									"key": "py status",
+									"value": "CLOSED"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CompaniesWith Py status ACTIVE",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base URL}}/api/companies?py status=ACTIVE",
+							"host": [
+								"{{base URL}}"
+							],
+							"path": [
+								"api",
+								"companies"
+							],
+							"query": [
+								{
+									"key": "py status",
+									"value": "ACTIVE"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CompaniesWith Py status BANKRUPT",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base URL}}/api/companies?py status=BANCRUPT",
+							"host": [
+								"{{base URL}}"
+							],
+							"path": [
+								"api",
+								"companies"
+							],
+							"query": [
+								{
+									"key": "py status",
+									"value": "BANCRUPT"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CompaniesWithInvQueryStatus",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base URL}}/api/companies?status=ABC",
+							"host": [
+								"{{base URL}}"
+							],
+							"path": [
+								"api",
+								"companies"
+							],
+							"query": [
+								{
+									"key": "status",
+									"value": "ABC"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CompaniesWithInvQueryLimit",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base URL}}/api/companies?limit=-1",
+							"host": [
+								"{{base URL}}"
+							],
+							"path": [
+								"api",
+								"companies"
+							],
+							"query": [
+								{
+									"key": "limit",
+									"value": "-1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CompaniesWithStrQueryLimit ABC",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base URL}}/api/companies?limit=ABC",
+							"host": [
+								"{{base URL}}"
+							],
+							"path": [
+								"api",
+								"companies"
+							],
+							"query": [
+								{
+									"key": "limit",
+									"value": "ABC"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CompaniesWithInvQueryOffset",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "New Request» на «CompaniesWithInvQuerypy py offset-3",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "CompanyById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base URL}}/api/companies/1",
+							"host": [
+								"{{base URL}}"
+							],
+							"path": [
+								"api",
+								"companies",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CompanyByNonexId",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base URL}}/api/companies/8",
+							"host": [
+								"{{base URL}}"
+							],
+							"path": [
+								"api",
+								"companies",
+								"8"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CompanyByIdLangRU",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept-Language",
+								"value": "RU",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base URL}}/api/companies/1",
+							"host": [
+								"{{base URL}}"
+							],
+							"path": [
+								"api",
+								"companies",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CompanyByIdInvLang",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept-Language",
+								"value": "AM",
+								"type": "text"
+							},
+							{
+								"key": "",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "{{base URL}}/api/companies/1",
+							"host": [
+								"{{base URL}}"
+							],
+							"path": [
+								"api",
+								"companies",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "users",
+			"item": [
+				{
+					"name": "UsersWithLimit&Offset",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base URL}}/api/users?limit=10&offset=5",
+							"host": [
+								"{{base URL}}"
+							],
+							"path": [
+								"api",
+								"users"
+							],
+							"query": [
+								{
+									"key": "limit",
+									"value": "10"
+								},
+								{
+									"key": "offset",
+									"value": "5"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UsersWithLimit-5",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base URL}}/api/users?limit=-5",
+							"host": [
+								"{{base URL}}"
+							],
+							"path": [
+								"api",
+								"users"
+							],
+							"query": [
+								{
+									"key": "limit",
+									"value": "-5"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UsersWithStrLimit&OffsetABC",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base URL}}/api/users?limit=abc&offset=abc",
+							"host": [
+								"{{base URL}}"
+							],
+							"path": [
+								"api",
+								"users"
+							],
+							"query": [
+								{
+									"key": "limit",
+									"value": "abc"
+								},
+								{
+									"key": "offset",
+									"value": "abc"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UsersWithoutSSL",
+					"protocolProfileBehavior": {
+						"followRedirects": false
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://restapi.tech/api/users",
+							"protocol": "https",
+							"host": [
+								"restapi",
+								"tech"
+							],
+							"path": [
+								"api",
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UserCreate",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "\n{\n  \"first_name\": \"Pifagor\",\n  \"last_name\": \"Samosskiy\",\n  \"company_id\": 3\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base URL}}/api/users",
+							"host": [
+								"{{base URL}}"
+							],
+							"path": [
+								"api",
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "21",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"first_name\": \"Pifagor\",\n  \"last_name\": \"Samosskiy\",\n  \"company_id\": 10\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base URL}}/api/users",
+							"host": [
+								"{{base URL}}"
+							],
+							"path": [
+								"api",
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "22",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"first_name\": \"Pifagor\",\n  \"last_name\": null,\n  \"company_id\": 3\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base URL}}/api/users",
+							"host": [
+								"{{base URL}}"
+							],
+							"path": [
+								"api",
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "23.1",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "23",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"first_name\": \"Pifagor\",\n  \"last_name\": \"Samosskiy\",\n  \"company_id\": 6\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base URL}}/api/users",
+							"host": [
+								"{{base URL}}"
+							],
+							"path": [
+								"api",
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "24",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"first_name\": \"Pifagor\",\n  \"company_id\": 3\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base URL}}/api/users",
+							"host": [
+								"{{base URL}}"
+							],
+							"path": [
+								"api",
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetCreatedUser",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base URL}}/api/users/11766",
+							"host": [
+								"{{base URL}}"
+							],
+							"path": [
+								"api",
+								"users",
+								"11766"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "26",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base URL}}/api/users/16857",
+							"host": [
+								"{{base URL}}"
+							],
+							"path": [
+								"api",
+								"users",
+								"16857"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UserUpdate",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"first_name\": \"Blez\",\n  \"last_name\": \"Pascal\",\n  \"company_id\": 1\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base URL}}/api/users/11766",
+							"host": [
+								"{{base URL}}"
+							],
+							"path": [
+								"api",
+								"users",
+								"11766"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "28",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"first_name\": \"Blez\",\n  \"last_name\": \"Pascal\",\n  \"company_id\": 16\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base URL}}/api/users1766",
+							"host": [
+								"{{base URL}}"
+							],
+							"path": [
+								"api",
+								"users1766"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "29",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"first_name\": \"Blez\",\n  \"last_name\": \"Pascal\",\n  \"company_id\": 1\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base URL}}/api/users/1176644",
+							"host": [
+								"{{base URL}}"
+							],
+							"path": [
+								"api",
+								"users",
+								"1176644"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteCreatedUse",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{base URL}}/api/users/11766",
+							"host": [
+								"{{base URL}}"
+							],
+							"path": [
+								"api",
+								"users",
+								"11766"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "31",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{base URL}}/api/users/1176646",
+							"host": [
+								"{{base URL}}"
+							],
+							"path": [
+								"api",
+								"users",
+								"1176646"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "issues",
+			"item": [
+				{
+					"name": "IssuesCompaniesWithQuery",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base URL}}/api/issues/companies?limit=1&offset=1&status=ACTIVE",
+							"host": [
+								"{{base URL}}"
+							],
+							"path": [
+								"api",
+								"issues",
+								"companies"
+							],
+							"query": [
+								{
+									"key": "limit",
+									"value": "1"
+								},
+								{
+									"key": "offset",
+									"value": "1"
+								},
+								{
+									"key": "status",
+									"value": "ACTIVE"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "IssuesCompanyByID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base URL}}/api/issues/companies/2",
+							"host": [
+								"{{base URL}}"
+							],
+							"path": [
+								"api",
+								"issues",
+								"companies",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "IssuesGetUserById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base URL}}/api/issues/users/11779",
+							"host": [
+								"{{base URL}}"
+							],
+							"path": [
+								"api",
+								"issues",
+								"users",
+								"11779"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "IssuesUserCreated",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"first_name\": \"Pifagor\",\n  \"last_name\": \"Samosskiy\",\n  \"company_id\": 3\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base URL}}/api/issues/users",
+							"host": [
+								"{{base URL}}"
+							],
+							"path": [
+								"api",
+								"issues",
+								"users"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "D/Z",
+			"item": [
+				{
+					"name": "36",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base URL}}/api/companies?py ststus=CLOSED&limit=6&offset=7",
+							"host": [
+								"{{base URL}}"
+							],
+							"path": [
+								"api",
+								"companies"
+							],
+							"query": [
+								{
+									"key": "py ststus",
+									"value": "CLOSED"
+								},
+								{
+									"key": "limit",
+									"value": "6"
+								},
+								{
+									"key": "offset",
+									"value": "7"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "37",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base URL}}/api/companies?limit=0&offset=0",
+							"host": [
+								"{{base URL}}"
+							],
+							"path": [
+								"api",
+								"companies"
+							],
+							"query": [
+								{
+									"key": "limit",
+									"value": "0"
+								},
+								{
+									"key": "offset",
+									"value": "0"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "38",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"first_name\": \"Nadi\",\n  \"last_name\": \"Kiseleva\",\n  \"company_id\": 3,\n  \"email\":  \"eve.holt@reqres.in\",\n  \"password\":  \"cityslicka\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base URL}}/api/users",
+							"host": [
+								"{{base URL}}"
+							],
+							"path": [
+								"api",
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "39",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "\n{\n  \"first_name\": \"Pifagor\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base URL}}/api/issues/users",
+							"host": [
+								"{{base URL}}"
+							],
+							"path": [
+								"api",
+								"issues",
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "40",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{base URL}}/api/users/ABC",
+							"host": [
+								"{{base URL}}"
+							],
+							"path": [
+								"api",
+								"users",
+								"ABC"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "AVT",
+			"item": [
+				{
+					"name": "1.1",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"pm.test(\"Successful POST request\", function () {",
+									"    pm.expect(pm.response.code).to.be.oneOf([200]);",
+									"});",
+									"pm.test(\"Status code is success\", function () {",
+									"    pm.response.to.be.success;",
+									"});",
+									"",
+									"pm.test(\"Response time is less than 500ms\", function () {",
+									"    pm.expect(pm.response.responseTime).to.be.below(500);",
+									"});",
+									"pm.test(\"Headers is valid\", function() {",
+									"    pm.expect(pm.response.headers.get('Content-Type')).to.eql('application/json');",
+									"    pm.expect(pm.response.headers.get('Connection')).to.eql('keep-alive')",
+									"});",
+									"let DataJson = pm.response.json().data",
+									"pm.test(\"Len of JSON with default limit\", function() {",
+									"    let countLenData = Object.keys(DataJson).length;",
+									"    pm.expect(countLenData).to.eql(3);",
+									"});",
+									"let schema = {",
+									"  \"type\": \"object\",",
+									"  \"properties\": {",
+									"    \"data\": {",
+									"      \"type\": \"array\",",
+									"      \"items\": ",
+									"        {",
+									"          \"type\": \"object\",",
+									"          \"properties\": {",
+									"            \"company_id\": {",
+									"              \"type\": \"integer\"",
+									"            },",
+									"            \"company_name\": {",
+									"              \"type\": \"string\"",
+									"            },",
+									"            \"company_address\": {",
+									"              \"type\": \"string\"",
+									"            },",
+									"            \"company_status\": {",
+									"              \"type\": \"string\"",
+									"            }",
+									"          },",
+									"          \"required\": [",
+									"            \"company_id\",",
+									"            \"company_name\",",
+									"            \"company_address\",",
+									"            \"company_status\"",
+									"          ]",
+									"        }",
+									"    },",
+									"    \"meta\": {",
+									"      \"type\": \"object\",",
+									"      \"properties\": {",
+									"        \"total\": {",
+									"          \"type\": \"integer\"",
+									"        },",
+									"        \"limit\": {",
+									"          \"type\": \"integer\"",
+									"        },",
+									"        \"offset\": {",
+									"          \"type\": \"integer\"",
+									"        }",
+									"      },",
+									"      \"required\": [",
+									"        \"total\",",
+									"        \"limit\",",
+									"        \"offset\"",
+									"      ]",
+									"    }",
+									"  },",
+									"  \"required\": [",
+									"    \"data\",",
+									"    \"meta\"",
+									"  ]",
+									"};",
+									"",
+									"pm.test('Schema is valid', function() {",
+									"    pm.response.to.have.jsonSchema(schema);",
+									"});",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base URL}}/api/companies",
+							"host": [
+								"{{base URL}}"
+							],
+							"path": [
+								"api",
+								"companies"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "1.2",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"pm.test(\"Response time is less than 500ms\", function () {",
+									"    pm.expect(pm.response.responseTime).to.be.below(500);",
+									"});",
+									"pm.test(\"Request by http\", function() {",
+									"    pm.expect(pm.request.url.protocol).to.eql(\"https\")",
+									"});",
+									"pm.test(\"Headers is vaild\", function() {",
+									"    pm.expect(pm.response.headers.get('Connection')).to.eql('keep-alive');",
+									"    pm.expect(pm.response.headers.get('Location')).to.eql('https://restapi.tech/api/companies');",
+									"});",
+									"",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"strictSSL": true,
+						"disableUrlEncoding": true,
+						"insecureHTTPParser": false
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Location",
+								"value": "https://restapi.tech/api/companies",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://restapi.tech/api/companies",
+							"protocol": "https",
+							"host": [
+								"restapi",
+								"tech"
+							],
+							"path": [
+								"api",
+								"companies"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "1.3",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"pm.test(\"Response time is less than 200ms\", function () {",
+									"    pm.expect(pm.response.responseTime).to.be.below(200);",
+									"});",
+									"pm.test(\"Headers is valid\", function() {",
+									"    pm.expect(pm.response.headers.get('Content-Type')).to.eql('application/json');",
+									"    pm.expect(pm.response.headers.get('Connection')).to.eql('keep-alive')",
+									"});",
+									"let DataJson = pm.response.json().data",
+									"pm.test(\"Len of JSON with default limit\", function() {",
+									"    let countLenData = Object.keys(DataJson).length;",
+									"    pm.expect(countLenData).to.eql(5);",
+									"});",
+									"let schema = {",
+									"  \"type\": \"object\",",
+									"  \"properties\": {",
+									"    \"data\": {",
+									"      \"type\": \"array\",",
+									"      \"items\": ",
+									"        {",
+									"          \"type\": \"object\",",
+									"          \"properties\": {",
+									"            \"company_id\": {",
+									"              \"type\": \"integer\"",
+									"            },",
+									"            \"company_name\": {",
+									"              \"type\": \"string\"",
+									"            },",
+									"            \"company_address\": {",
+									"              \"type\": \"string\"",
+									"            },",
+									"            \"company_status\": {",
+									"              \"type\": \"string\"",
+									"            }",
+									"          },",
+									"          \"required\": [",
+									"            \"company_id\",",
+									"            \"company_name\",",
+									"            \"company_address\",",
+									"            \"company_status\"",
+									"          ]",
+									"        }",
+									"    },",
+									"    \"meta\": {",
+									"      \"type\": \"object\",",
+									"      \"properties\": {",
+									"        \"total\": {",
+									"          \"type\": \"integer\"",
+									"        },",
+									"        \"limit\": {",
+									"          \"type\": \"integer\"",
+									"        },",
+									"        \"offset\": {",
+									"          \"type\": \"integer\"",
+									"        }",
+									"      },",
+									"      \"required\": [",
+									"        \"total\",",
+									"        \"limit\",",
+									"        \"offset\"",
+									"      ]",
+									"    }",
+									"  },",
+									"  \"required\": [",
+									"    \"data\",",
+									"    \"meta\"",
+									"  ]",
+									"};",
+									"",
+									"pm.test('Schema is valid', function() {",
+									"    pm.response.to.have.jsonSchema(schema);",
+									"});",
+									"pm.test(\"Verify offset\", function() {",
+									"    pm.expect(DataJson[0].company_id).to.eql(3)",
+									"})",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://restapi.tech/api/companies?limit=5&offset=2",
+							"protocol": "https",
+							"host": [
+								"restapi",
+								"tech"
+							],
+							"path": [
+								"api",
+								"companies"
+							],
+							"query": [
+								{
+									"key": "limit",
+									"value": "5"
+								},
+								{
+									"key": "offset",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "1.4",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"pm.test(\"Response time is less than 500ms\", function () {",
+									"    pm.expect(pm.response.responseTime).to.be.below(500);",
+									"});",
+									"pm.test(\"Successful POST request\", function () {",
+									"    pm.expect(pm.response.code).to.be.oneOf([200]);",
+									"});",
+									"pm.test(\"Headers is valid\", function() {",
+									"    pm.expect(pm.response.headers.get('Content-Type')).to.eql('application/json');",
+									"    pm.expect(pm.response.headers.get('Connection')).to.eql('keep-alive')",
+									"});",
+									"pm.test(\"Verify comp status\", function(){",
+									"    for(let company of pm.response.json().data){",
+									"        pm.expect(company.company_status).to.be.eql(\"ACTIVE\");",
+									"    }",
+									"});",
+									"",
+									"",
+									"",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base URL}}/api/companies?py status=ACTIVE",
+							"host": [
+								"{{base URL}}"
+							],
+							"path": [
+								"api",
+								"companies"
+							],
+							"query": [
+								{
+									"key": "py status",
+									"value": "ACTIVE"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
